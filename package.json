@@ -1,0 +1,55 @@
+{
+  "name": "@soulnote/markdown-it-tasks",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "A markdown-it plugin that adds tasks(todo/doing/done...) function.",
+  "author": {
+    "name": "mjrt",
+    "email": "mjrt.dev@outlook.com",
+    "url": "https://github.com/mjrt"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/mjrt/markdown-it-tasklists",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mjrt/markdown-it-tasklists.git"
+  },
+  "keywords": [
+    "todo",
+    "tasklist",
+    "tasklists",
+    "markdown",
+    "markdown-it",
+    "markdown-it-plugin"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "packageManager": "pnpm@10.12.4",
+  "peerDependencies": {
+    "markdown-it": ">=14.1.0"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@types/jest": "^30.0.0",
+    "@types/markdown-it": "^14.1.2",
+    "conventional-changelog-conventionalcommits": "^9.0.0",
+    "jest": "^30.0.4",
+    "semantic-release": "^24.2.6",
+    "ts-jest": "^29.4.0"
+  }
+}
