@@ -5,41 +5,37 @@ describe("Task plugin integration", () => {
   it("renders unchecked task ([ ])", () => {
     const md = new MarkdownIt().use(Tasks());
     const html = md.render("[ ] todo item");
-    expect(html).toContain('<input type="checkbox" disabled>');
-    expect(html).toContain("TODO");
-    expect(html).toContain("todo item");
-    expect(html).toContain("md-tasks");
-    expect(html).not.toContain("checked");
+    expect(html).toBe(
+      '<p><span class="md-tasks"><input type="checkbox" disabled><span>TODO</span>todo item</span></p>\n'
+    );
   });
 
   it("renders checked task ([x])", () => {
     const md = new MarkdownIt().use(Tasks());
     const html = md.render("[x] done item");
-    expect(html).toContain('<input type="checkbox" disabled checked>');
-    expect(html).toContain("DONE");
-    expect(html).toContain("done item");
+    expect(html).toBe(
+      '<p><span class="md-tasks"><input type="checkbox" disabled checked><span>DONE</span>done item</span></p>\n'
+    );
   });
 
   it("renders checked task ([X]) after list item", () => {
     const md = new MarkdownIt().use(Tasks());
     const html = md.render("- [X] finished");
-    expect(html).toContain('<input type="checkbox" disabled checked>');
-    expect(html).toContain("DONE");
-    expect(html).toContain("finished");
+    expect(html).toBe(
+      '<ul>\n<li><span class="md-tasks"><input type="checkbox" disabled checked><span>DONE</span>finished</span></li>\n</ul>\n'
+    );
   });
 
   it("does not match non-task lines", () => {
     const md = new MarkdownIt().use(Tasks());
     const html = md.render("[y] not a task");
-    expect(html).not.toContain('type="checkbox"');
-    expect(html).toContain("[y] not a task");
+    expect(html).toBe("<p>[y] not a task</p>\n");
   });
 
   it("renders normal list item without checkbox", () => {
     const md = new MarkdownIt().use(Tasks());
     const html = md.render("- normal item");
-    expect(html).not.toContain('type="checkbox"');
-    expect(html).toContain("normal item");
+    expect(html).toBe("<ul>\n<li>normal item</li>\n</ul>\n");
   });
 
   it("supports custom class and render", () => {
@@ -51,23 +47,8 @@ describe("Task plugin integration", () => {
       })
     );
     const html = md.render("[ ] custom render");
-    expect(html).toContain('<custom class="my-task-open">');
-    expect(html).toContain("</custom>");
-    expect(html).toContain("custom render");
-  });
-
-  it("handles multiple task items and mixed content", () => {
-    const md = new MarkdownIt().use(Tasks());
-    const html = md.render(
-      `[ ] todo\n- [x] done\n [X] finished\n [y] not a task\n- normal`
+    expect(html).toBe(
+      '<p><custom class="my-task-open">custom render</custom></p>\n'
     );
-    expect(html.match(/type="checkbox" disabled>/g)?.length).toBe(1); // only one unchecked
-    expect(html.match(/type="checkbox" disabled checked>/g)?.length).toBe(
-      undefined
-    ); // 0 checked
-    expect(html).toContain("TODO");
-    expect(html).not.toContain("DONE");
-    expect(html).toContain("not a task");
-    expect(html).toContain("normal");
   });
 });

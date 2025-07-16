@@ -74,6 +74,7 @@ const processTaskTokens = (state: StateCore): boolean => {
     if (isFirstInlineToken) {
       const match = curr.children![0].content.match(PATTERN);
       if (match) {
+        console.log(match);
         return genTaskTokens(state, curr, match);
       }
     }
@@ -95,7 +96,7 @@ const genTaskTokens = (
   children.unshift(openingToken);
 
   // the remaining text
-  children[0].content = match[2];
+  children[1].content = match[2];
 
   // closing token
   const closingToken = new state.Token(RENDER_CLOSE_NAME, "", -1);
