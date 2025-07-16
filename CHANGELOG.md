@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/mjrt/markdown-it-tasks/compare/v1.0.2...v1.0.3) (2025-07-16)
+
+
+### Bug Fixes
+
+* delete unnecessary console.log ([41bf430](https://github.com/mjrt/markdown-it-tasks/commit/41bf430d09d0fd3eb94cf5e29fb010182e10b366))
+
 ## [1.0.2](https://github.com/mjrt/markdown-it-tasks/compare/v1.0.1...v1.0.2) (2025-07-16)
 
 
