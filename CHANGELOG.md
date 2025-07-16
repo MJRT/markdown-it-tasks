@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/mjrt/markdown-it-tasks/compare/v1.0.0...v1.0.1) (2025-07-16)
+
+
+### Bug Fixes
+
+* set publish access to public ([d0d2850](https://github.com/mjrt/markdown-it-tasks/commit/d0d28502a899a3d2e01a733e891a2042134b341e))
+
 # 1.0.0 (2025-07-16)
 
 
