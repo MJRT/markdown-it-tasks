@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/mjrt/markdown-it-tasks/compare/v1.0.1...v1.0.2) (2025-07-16)
+
+
+### Bug Fixes
+
+* delete redundance keyword and update test use equal instead of contain ([33fa885](https://github.com/mjrt/markdown-it-tasks/commit/33fa885490cff43fe1758d9d9c97c6ac23e21d48))
+
 ## [1.0.1](https://github.com/mjrt/markdown-it-tasks/compare/v1.0.0...v1.0.1) (2025-07-16)
 
 
