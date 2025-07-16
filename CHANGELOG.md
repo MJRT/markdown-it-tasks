@@ -1,3 +1,15 @@
+# 1.0.0 (2025-07-16)
+
+
+### Bug Fixes
+
+* align plugin name ([79bf7ca](https://github.com/mjrt/markdown-it-tasks/commit/79bf7ca38db3313a5601b89a126c3d4e38baf091))
+
+
+### Features
+
+* syntax recognise and basic renderer ([1ff7941](https://github.com/mjrt/markdown-it-tasks/commit/1ff79412c2f3ee10368212bacfabf11bc4e2af27))
+
 ## [1.0.1](https://github.com/mjrt/markdown-it-bi-directional-links/compare/v1.0.0...v1.0.1) (2025-07-08)
 
 
