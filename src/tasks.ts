@@ -25,7 +25,6 @@ const PATTERN = new RegExp(
     .map((k) => k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
     .join("|")})\\] (.+)$`
 );
-// console.log(PATTERN);
 
 export interface TaskOptions {
   className?: string;
@@ -74,7 +73,6 @@ const processTaskTokens = (state: StateCore): boolean => {
     if (isFirstInlineToken) {
       const match = curr.children![0].content.match(PATTERN);
       if (match) {
-        console.log(match);
         return genTaskTokens(state, curr, match);
       }
     }
