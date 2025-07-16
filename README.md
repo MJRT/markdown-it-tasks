@@ -12,13 +12,13 @@
 
 ---
 
-A powerful, flexible, and beautiful plugin for <a href="https://github.com/markdown-it/markdown-it">markdown-it</a> that brings task lists to your Markdown documents. Supports multiple task states (TODO, DOING, DONE, CANCELLED, IMPORTANT) with customizable rendering.
+A powerful, flexible, and beautiful plugin for <a href="https://github.com/markdown-it/markdown-it">markdown-it</a> that brings tasks to your Markdown documents. Supports multiple task states (TODO, DOING, DONE, CANCELLED, IMPORTANT) with customizable rendering.
 
 ---
 
 ## ✨ Features
 
-- ✔️ **Task List Syntax**: Add todo, doing, done, cancelled, and important tasks in Markdown.
+- ✔️ **Task Syntax**: Add todo, doing, done, cancelled, and important tasks in Markdown.
 - 🎨 **Customizable**: Change class names and rendering templates easily.
 - 🧩 **Seamless Integration**: Works out-of-the-box with markdown-it.
 - 🛡️ **TypeScript Support**: Fully typed for safe and modern development.
@@ -41,35 +41,33 @@ pnpm add @soulnote/markdown-it-tasks
 
 ```js
 import MarkdownIt from "markdown-it";
-import { Tasklist } from "@soulnote/markdown-it-tasks";
+import { Tasks } from "@soulnote/markdown-it-tasks";
 
-const md = new MarkdownIt().use(Tasklist());
+const md = new MarkdownIt().use(Tasks());
+const html = md.render("[ ] todo item");
 
-const result = md.render(`
-[ ] Write documentation\n[x] Release package\n[~] Working on new feature\n[-] Dropped idea\n[!] Urgent fix
-`);
-console.log(result);
+console.log(html);
 ```
 
 ### Rendered Output
 
 ```html
-<span class="tasklist"
+<span class="md-tasks"
   ><input type="checkbox" disabled /><span>TODO</span>Write documentation</span
 >
-<span class="tasklist"
+<span class="md-tasks"
   ><input type="checkbox" disabled checked /><span>DONE</span>Release
   package</span
 >
-<span class="tasklist"
+<span class="md-tasks"
   ><input type="checkbox" disabled /><span>DOING</span>Working on new
   feature</span
 >
-<span class="tasklist"
+<span class="md-tasks"
   ><input type="checkbox" disabled checked /><span>CANCELLED</span>Dropped
   idea</span
 >
-<span class="tasklist"
+<span class="md-tasks"
   ><input type="checkbox" disabled /><span>IMPORTANT</span>Urgent fix</span
 >
 ```
@@ -94,7 +92,7 @@ console.log(result);
 
 ```js
 const md = new MarkdownIt().use(
-  Tasklist({
+  Task({
     className: "my-task",
     render_open: '<custom class="my-task-open">',
     render_close: "</custom>",
@@ -110,7 +108,7 @@ md.render("[ ] Custom render");
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!<br/>
-Feel free to check [issues page](https://github.com/mjrt/markdown-it-tasklists/issues) or submit a pull request.
+Feel free to check [issues page](https://github.com/mjrt/markdown-it-tasks/issues) or submit a pull request.
 
 ---
 

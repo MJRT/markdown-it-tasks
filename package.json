@@ -9,13 +9,16 @@
     "url": "https://github.com/mjrt"
   },
   "license": "MIT",
-  "homepage": "https://github.com/mjrt/markdown-it-tasklists",
+  "homepage": "https://github.com/mjrt/markdown-it-tasks",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mjrt/markdown-it-tasklists.git"
+    "url": "https://github.com/mjrt/markdown-it-tasks.git"
   },
   "keywords": [
+    "soulnote",
     "todo",
+    "task",
+    "tasks",
     "tasklist",
     "tasklists",
     "markdown",

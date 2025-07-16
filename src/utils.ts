@@ -1,3 +1,3 @@
 export const convertRuleNameToClassName = (ruleName: string) => {
-  return ruleName.replace(/_/g, "-");
+  return `md-${ruleName.replace(/_/g, "-")}`;
 };
