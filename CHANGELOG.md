@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/mjrt/markdown-it-tasks/compare/v1.0.3...v1.1.0) (2025-07-18)
+
+
+### Features
+
+* introduce [>] symbol for optional tasks with low priority ([04f512d](https://github.com/mjrt/markdown-it-tasks/commit/04f512d8753861a5d832959335f240c800ef44ee))
+
 ## [1.0.3](https://github.com/mjrt/markdown-it-tasks/compare/v1.0.2...v1.0.3) (2025-07-16)
 
 
