@@ -12,7 +12,7 @@
 
 ---
 
-A powerful, flexible, and beautiful plugin for <a href="https://github.com/markdown-it/markdown-it">markdown-it</a> that brings tasks to your Markdown documents. Supports multiple task states (TODO, DOING, DONE, CANCELLED, IMPORTANT) with customizable rendering.
+A powerful, flexible, and beautiful plugin for <a href="https://github.com/markdown-it/markdown-it">markdown-it</a> that brings tasks to your Markdown documents. Supports multiple task states (TODO, DOING, DONE, CANCELLED, IMPORTANT, OPTIONAL...) with customizable rendering.
 
 ---
 
@@ -83,6 +83,7 @@ console.log(html);
 | `[~]`           | DOING     |
 | `[-]`           | CANCELLED |
 | `[!]`           | IMPORTANT |
+| `[>]`           | OPTIONAL |
 
 ---
 

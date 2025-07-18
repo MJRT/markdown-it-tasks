@@ -17,6 +17,7 @@ const STATE_MAP: Record<string, string> = {
   "~": "DOING",
   "-": "CANCELLED",
   "!": "IMPORTANT",
+  ">": "OPTIONAL",
 };
 
 // const PATTERN = /^\[(\u00A0| |x|X|~|-|!)\] (.+)$/;
