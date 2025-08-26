@@ -24,3 +24,28 @@ expo-env.d.ts
 
 .yalc/*
 yalc.lock
+
+# AI tools
+# CLAUDE
+CLAUDE.md
+CLAUDE.local.md
+.claude
+# cursor
+.cursorrules
+.cursorignore
+.cursor-indexing-ignore
+.cursor/
+#Gemini
+GEMINI.md
+# qwen
+QWEN.md
+# Windsurf
+.windsurfrules
+scratchpad.md
+# Github Copilot 
+.github/copilot-instructions.md
+.copilot/
+# Devin 
+.devin/
+devin.log
+devin-plan.md

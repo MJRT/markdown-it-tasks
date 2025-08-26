@@ -5,11 +5,10 @@ import type { Token } from "markdown-it/index.js";
 import { convertRuleNameToClassName } from "./utils";
 
 export const TASKS_RULE_NAME = "tasks";
-
 const RENDER_OPEN_NAME = `${TASKS_RULE_NAME}_open`;
 const RENDER_CLOSE_NAME = `${TASKS_RULE_NAME}_close`;
 
-const STATE_MAP: Record<string, string> = {
+export const STATE_MAP: Record<string, string> = {
   " ": "TODO",
   "\u00A0": "TODO",
   x: "DONE",
@@ -17,11 +16,11 @@ const STATE_MAP: Record<string, string> = {
   "~": "DOING",
   "-": "CANCELLED",
   "!": "IMPORTANT",
-  ">": "OPTIONAL",
+  ".": "OPTIONAL",
 };
 
 // const PATTERN = /^\[(\u00A0| |x|X|~|-|!)\] (.+)$/;
-const PATTERN = new RegExp(
+export const PATTERN = new RegExp(
   `^\\[(${Object.keys(STATE_MAP)
     .map((k) => k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
     .join("|")})\\] (.+)$`
