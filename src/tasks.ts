@@ -9,7 +9,7 @@ const RENDER_OPEN_NAME = `${TASKS_RULE_NAME}_open`;
 const RENDER_CLOSE_NAME = `${TASKS_RULE_NAME}_close`;
 
 export const STATE_MAP: Record<string, string> = {
-    "\u00A0": "TODO",
+  "\u00A0": "TODO",
   " ": "TODO",
   x: "DONE",
   X: "DONE",
