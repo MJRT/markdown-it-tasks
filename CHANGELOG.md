@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/mjrt/markdown-it-tasks/compare/v1.3.0...v1.4.0) (2025-08-26)
+
+
+### Features
+
+* update state orders ([e55d505](https://github.com/mjrt/markdown-it-tasks/commit/e55d505d24699c0905ae9d5b7efdfc0515d9b00d))
+
 # [1.3.0](https://github.com/mjrt/markdown-it-tasks/compare/v1.2.0...v1.3.0) (2025-08-26)
 
 
