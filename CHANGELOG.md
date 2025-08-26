@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/mjrt/markdown-it-tasks/compare/v1.1.0...v1.2.0) (2025-08-26)
+
+
+### Features
+
+* change OPTIONAL symbol to . ; export more variables; add more tests ([161c544](https://github.com/mjrt/markdown-it-tasks/commit/161c5444aec03a1391622480d12ddb2278fad4f4))
+
 # [1.1.0](https://github.com/mjrt/markdown-it-tasks/compare/v1.0.3...v1.1.0) (2025-07-18)
 
 
